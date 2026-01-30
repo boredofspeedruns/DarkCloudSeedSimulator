@@ -103,7 +103,9 @@ int main(int argc, char** argv) {
     std::cout << "unique_values=" << unique << "\n";
     std::cout << "unreached_values_within_range=" << missing
               << " (out of " << (uint64_t)((int64_t)maxV - (int64_t)minV + 1) << ")\n";
-
+    std::cout << "final_rng_state="
+            << std::showbase << std::hex << rng.state
+            << std::dec << " (" << rng.state << ")\n";
     std::cout << "Wrote seed_results.csv\n";
     return 0;
 }
